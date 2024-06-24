@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="flex justify-center h-screen items-center">
+        <div class="container flex-col justify-center items-center flex ">
+            <h1>asdfas</h1>
+            <form class="w-full  max-w-2xl max-md:px-18" action="{% url 'forms:register' %}" method="POST">
+                {% csrf_token %}
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+                            for="grid-first-name">
+                            اسم الطالب
+                        </label>
+                        <input
+                            class="appearance-none block w-full  text-gray-700 border placeholder:text-sm  placeholder:h-8  rounded py-3  px-4 mb-3 leading-tight focus:outline-none focus:border-sky-500"
+                            type="text" placeholder="أدخل اسم الطالب" name="student_name">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+                            for="grid-last-name">
+                            الرقم المدني
+                        </label>
+                        <input
+                            class="appearance-none block w-full  text-gray-700 border placeholder:text-sm  placeholder:h-8 border-gray-200 rounded py-3  px-4 leading-tight focus:outline-none focus:border-sky-500 "
+                            type="text" placeholder="الرقم المدني" name="civil_no">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+                            for="grid-first-name">
+                            تاريخ الميلاد
+                        </label>
+                        <input
+                            class="appearance-none block w-full  text-gray-700 border placeholder:text-sm  placeholder:h-8  rounded py-3  px-4 mb-3 leading-tight focus:outline-none focus:border-sky-500" type="date"  placeholder="تاريخ الميلاد" name="date_of_birth">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+                            for="grid-last-name">
+                            الجنسية
+                        </label>
+                        <input
+                            class="appearance-none block w-full  text-gray-700 border placeholder:text-sm  placeholder:h-8 border-gray-200 rounded py-3  px-4 leading-tight focus:outline-none focus:border-sky-500 "
+                            type="text" placeholder="الجنسية" name="nationality">
+                    </div>
+                </div>
+                <!-- <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+                            for="grid-password">
+                            Password
+                        </label>
+                        <input
+                            class="appearance-none block w-full  text-gray-700 border placeholder:text-sm  placeholder:h-8 border-gray-200 rounded py-3  px-4 mb-3 leading-tight focus:outline-none focus:border-sky-500 "
+                            id="grid-password" type="password" placeholder="******************">
+                        <p class="text-gray-600 text-sm italic">Make it as long and as crazy as you'd like</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-2">
+                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+                            for="grid-city">
+                            City
+                        </label>
+                        <input
+                            class="appearance-none block w-full  text-gray-700 border placeholder:text-sm  placeholder:h-8 border-gray-200 rounded py-3  px-4 leading-tight focus:outline-none focus:border-sky-500 "
+                            id="grid-city" type="text" placeholder="Albuquerque">
+                    </div>
+                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+                            for="grid-state">
+                            State
+                        </label>
+                        <div class="relative">
+                            <select
+                                class="block appearance-none w-full  border border-gray-200 text-gray-700 py-3  px-4 pr-8 rounded leading-tight focus:outline-none focus:border-sky-500 "
+                                id="grid-state">
+                                <option>New Mexico</option>
+                                <option>Missouri</option>
+                                <option>Texas</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+                            for="grid-zip">
+                            Zip
+                        </label>
+                        <input
+                            class="appearance-none block w-full  text-gray-700 border placeholder:text-sm  placeholder:h-8 border-gray-200 rounded py-3  px-4 leading-tight focus:outline-none focus:border-sky-500 "
+                            id="grid-zip" type="text" placeholder="90210">
+                    </div>
+                </div> -->
+                
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >ارسال</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
